@@ -1,6 +1,6 @@
 <?php
 
-//use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route;
 use App\Illuminate\Http\Request;
 use App\Http\Controllers\postController;
 use App\Http\Controllers\usuariosController;
@@ -20,4 +20,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', usuariosController::Class . '@saveUsuarios');
+//Route::get('/usuarios', usuariosController::Class . '@saveUsuarios');
+
+Route::post('/usuarios', usuariosController::Class . '@saveUsuarios');

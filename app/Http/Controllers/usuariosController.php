@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use app\Models\usuarios;
 use Illuminate\Http\Request;
 
 class usuariosController extends Controller
@@ -11,7 +11,7 @@ class usuariosController extends Controller
 
         $posts = Usuarios::all();
         dd($posts);
-        return view('post-list');
+        return view('usuarios');
 
         try {
             if($request->email) {
