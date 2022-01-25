@@ -6,6 +6,17 @@ use Illuminate\Http\Request;
 
 class usuariosController extends Controller
 {
+    public function showList ()
+    {
+     $usuario = Usuario::all();
+     //return json_encode($usuario);
+     return view('Usuario-list');
+    }
+    
+    public function Form(){
+        return view('newUsuario');
+    }
+    
     public function saveUsuarios(Request $request)
     {
 
