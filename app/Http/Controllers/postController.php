@@ -16,8 +16,8 @@ class PostController extends Controller
 
     public function showForm()
     {
-        $categories = Category::all();
-        return view('new-post', ['category'=>$categories]);
+        //$categories = Category::all();
+        return view('new-post' , );
     }
 
     public function showFormEdit(Request $request)

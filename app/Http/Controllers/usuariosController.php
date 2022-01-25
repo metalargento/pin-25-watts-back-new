@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use app\Models\usuarios;
+//use app\Models\usuarios;
+use App\Models\usuarios;
 use Illuminate\Http\Request;
 
 class usuariosController extends Controller
@@ -16,13 +17,10 @@ class usuariosController extends Controller
     public function Form(){
         return view('newUsuario');
     }
-    
+
     public function saveUsuarios(Request $request)
     {
 
-        $posts = Usuarios::all();
-        dd($posts);
-        return view('usuarios');
 
         try {
             if($request->email) {
@@ -42,7 +40,7 @@ class usuariosController extends Controller
                      
                 ];
 
-                Mail::to("aliagajoseignacio@gmail.com")->send(new SendData($details));
+                //Mail::to("aliagajoseignacio@gmail.com")->send(new SendData($details));
 
                 
                 return 'Email ENVIADO';

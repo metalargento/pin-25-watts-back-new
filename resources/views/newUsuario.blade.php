@@ -22,7 +22,7 @@
     </head>
     <body>
         @csrf
-    <form action="https://proyecto-25watts-back.herokuapp.com//public/usuario-nuevo"  method="post">
+    <form action="{{route('guardarUsuario')}}"  method="post">
     {{ csrf_field() }}
     <table>
         <tr><td>Nombre</td>

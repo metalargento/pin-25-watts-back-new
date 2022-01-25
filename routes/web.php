@@ -20,6 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/usuarios', usuariosController::Class . '@saveUsuarios');
+Route::get('/usuarios-form', "App\Http\Controllers\usuariosController@Form");
 
-Route::post('/usuarios', usuariosController::Class . '@saveUsuarios');
+Route::post('/usuarios', "App\Http\Controllers\usuariosController@saveUsuarios" )->name("guardarUsuario");
+
+//{{url('/usuarios')}}
+//https://proyecto-25watts-back.herokuapp.com/usuarios
