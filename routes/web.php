@@ -1,6 +1,6 @@
 <?php
 
-//use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route;
 use App\Illuminate\Http\Request;
 use App\Http\Controllers\postController;
 use App\Http\Controllers\usuariosController;
@@ -20,4 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', usuariosController::Class . '@saveUsuarios');
+Route::get('/usuarios-form', "App\Http\Controllers\usuariosController@Form");
+
+Route::post('/usuarios', "App\Http\Controllers\usuariosController@saveUsuarios" )->name("guardarUsuario");
+
+//{{url('/usuarios')}}
+//https://proyecto-25watts-back.herokuapp.com/usuarios
