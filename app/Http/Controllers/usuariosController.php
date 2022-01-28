@@ -9,7 +9,7 @@ class usuariosController extends Controller
 {
     public function showList ()
     {
-     $usuario = Usuario::all();
+     $usuario = usuarios::all();
      //return json_encode($usuario);
      return view('Usuario-list');
     }
